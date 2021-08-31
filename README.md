@@ -1,37 +1,35 @@
-# nothingness
+# Pygoto
 
-This is nothing, just a template for PyPI packages
+Use goto in Python
 
 ## Installation
 
 ### From PyPI
 
 ```sh
-pip3 install nothingness
+pip3 install pygoto
 ```
 
 ### From GitHub
 
 ```sh
-pip3 install git+https://github.com/donno2048/nothingness
+pip3 install git+https://github.com/donno2048/pygoto
 ```
 
 ## Usage
 
-### Import fun from \_\_init__.py
-
 ```py
-from nothingness import fun
+from goto import goto
+flag = False
+flag = not flag
+print(0)
+if flag:
+    goto(3)
+print(1)
 ```
 
-### Run \_\_main__.py
-
 ```sh
-python3 -m nothingness
-```
-
-### Run main from \_\_main__.py
-
-```sh
-nothingness
+0
+0
+1
 ```

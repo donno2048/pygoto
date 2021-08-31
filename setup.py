@@ -1,23 +1,20 @@
 from setuptools import setup, find_packages
 setup(
-    name='nothingness',
+    name='pygoto',
     version='1.0.0',
     license='MIT',
     author='Elisha Hollander',
     author_email='just4now666666@gmail.com',
-    description="This is nothing, just a template for PyPI packages",
+    description="Use goto in Python",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    url='https://github.com/donno2048/nothingness',
+    url='https://github.com/donno2048/pygoto',
     project_urls={
-        'Documentation': 'https://github.com/donno2048/nothingness#readme',
-        'Bug Reports': 'https://github.com/donno2048/nothingness/issues',
-        'Source Code': 'https://github.com/donno2048/nothingness',
+        'Documentation': 'https://github.com/donno2048/pygoto#readme',
+        'Bug Reports': 'https://github.com/donno2048/pygoto/issues',
+        'Source Code': 'https://github.com/donno2048/pygoto',
     },
     python_requires='>=3.0',
     packages=find_packages(),
-    install_requires=[],
-    include_package_data=True,
-    classifiers=['Programming Language :: Python :: 3'],
-    entry_points={ 'console_scripts': [ 'nothingness=nothingness.__main__:main' ] }
+    classifiers=['Programming Language :: Python :: 3']
 )

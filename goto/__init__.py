@@ -2,12 +2,14 @@ from os import _exit
 from sys import modules, exit
 from inspect import getsourcelines
 def goto(line: int) -> None:
+    try: main = getsourcelines(modules["__main__"])[0][line - 1:]
+    except TypeError: exit("You must be in a file to use goto.")
     try:
         if not isinstance(line, int):
             raise TypeError("You should only use integer values in goto")
         if line < 1:
             raise ValueError("The line number must be positive")
-        exit(exec("\n".join(getsourcelines(modules["__main__"])[0][line - 1:]), modules["__main__"].__dict__))
+        exit(exec("\n".join(main), modules["__main__"].__dict__))
     except RecursionError:
         print("You have passed the recursion limit, please check your goto")
         _exit(1)

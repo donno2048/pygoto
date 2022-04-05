@@ -1,7 +1,7 @@
 from os import _exit
 from sys import modules, exit
 from inspect import getsourcelines
-def goto(line: int) -> None:
+def goto(line: int, /) -> None:
     try: main = getsourcelines(modules["__main__"])[0][line - 1:]
     except TypeError: exit("You must be in a file to use goto.")
     try:

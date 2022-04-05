@@ -1,3 +1,4 @@
 build
 dist
 pygoto.egg-info
+__pycache__

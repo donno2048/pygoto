@@ -88,3 +88,15 @@ print("Done!")
 ```py
 You have passed the recursion limit, please check your goto
 ```
+
+```py
+from goto import label, gotolabel
+flag = False
+label(42)
+flag = not flag
+print(0)
+if flag:
+    gotolabel(42)
+print(1)
+
+```

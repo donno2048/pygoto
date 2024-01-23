@@ -37,3 +37,14 @@ def goto(line: int, /) -> None:
             else:
                 break
         exit(message + "\n" + type(e).__name__ + ": " + str(e))
+def gotolabel(label: int, /) -> None:
+    try: main = getsourcelines(modules["__main__"])[0]
+    except TypeError: exit("You must be in a file to use goto.")
+    try: line = 1+main.index("label(" + str(label) + ")\n")
+    except ValueError: exit("there is no label " + label)
+    goto(line)
+def label(label: int):
+    """
+    A function so labels are ignored in normal control flow.
+    """
+    pass
